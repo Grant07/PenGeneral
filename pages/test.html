@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <style>
+            h1{ display: inline;}
+            #container { width: 500px; margin: 0 auto; }
+            img { float: right;}
+            .section { border: 2px solid #0197CA;
+             border-radius: 3px; margin: 10px 0; padding: 5px;}
+        </style>
+        <script type="text/javascript">
+            function printSection(el){
+                var getFullContent = document.body.innerHTML;
+                var printsection = document.getElementById(el).innerHTML;
+                document.body.innerHTML = printsection;
+                window.print();
+                document.body.innerHTML = getFullContent;
+            }
+        </script>
+    </head>
+    <body>
+    <h1>Content</h1>
+	<a onclick="printSection('container')">
+	<img title="Print Full Page Content" src="images/printicon.png" alt="Printicon" />
+	</a>
+   <div id="container">
+   <div class="section">
+      For this we are using HTML and simple javascript code.<br /><br />
+      <h1>First Section</h2>
+      <a onclick="printSection('section1')">
+	   <img title="Print First Section" src="images/printicon.png" alt="Printicon" />
+	  </a>
+      <div id="section1">
+	  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+	  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+	  when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+	  It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop publishing software 
+          like Aldus PageMaker including versions of Lorem Ipsum.</div>
+   </div>
+   <br /><br />
+   <div class="section">
+      <h1>Second Section</h1>
+      <a onclick="printSection('section2')">
+	    <img title="Print Second Section" src="images/printicon.png" alt="Printicon" />
+	  </a>
+      <div id="section2">Contrary to popular belief, Lorem Ipsum is not simply random text.
+	  It has roots in a piece of classical Latin literature from 45 BC, making it over 
+	  2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+	  Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+	  Ipsum passage, and going through the cites of the word in classical literature, 
+	  discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of
+	  "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+	  This book is a treatise on the theory of ethics, very popular during the Renaissance. 
+	  The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+	  </div>
+   </div>
+   <br /><br />
+   <div class="section">
+      <h1>Third Section</h1>
+      <a onclick="printSection('section3')">
+	  <img title="Print Third Section" src="images/printicon.png" alt="Printicon" />
+	  </a>
+      <div id="section3">It is a long established fact that a reader will be distracted by 
+	  the readable content of a page when looking at its layout. The point of using Lorem
+	  Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+	  'Content here, content here', making it look like readable English. Many desktop publishing 
+	  packages and web page editors now use Lorem Ipsum as their default model text, and a search 
+	  for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have 
+	  evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+      </div>
+   </div>
+</div>
+</body> 
+</html> 
